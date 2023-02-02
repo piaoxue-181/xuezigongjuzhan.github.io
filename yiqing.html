@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+<title>血字工具站-血字疫情查询</title>
+
+<head><meta name='description' content='血字疫情查询 打开世界之窗'></head>
+
+<div class="container"></div>
+
+<script src='https://api.vvhan.com/api/snow'></script>
+
+<script src='https://api.vvhan.com/api/bolang'></script>
+
+<body background="https://api.vvhan.com/api/bing" style=" background-repeat:no-repeat ; background-size:100% 100%; background-attachment: fixed;">
+
+
+
+
+<body class="bs-docs-home">
+<style>
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+ 
+
+        div.search {
+
+            padding: 50px 0;
+
+        }
+
+ 
+
+        form {
+
+            position: relative;
+
+            width: 500px;    
+
+            margin: 0 auto;  
+
+        }
+
+ 
+
+        input,button {
+
+            border: none;   
+
+            outline: none; 
+
+        }
+
+ 
+
+        .search input {
+
+            width: 100%;
+
+            height: 50px;
+
+            padding-left: 13px;
+
+            border: 2px solid #c5464a;
+
+            border-radius: 19px;   
+
+            background: white; 
+
+        }
+
+ 
+
+        .search button {
+
+            height: 50px;
+
+            width: 42px;
+
+            cursor: pointer;  
+
+            position: absolute;
+
+            background: #c5464a;
+
+            border-radius: 0 19px 19px 0;
+
+            width: 100px;
+
+            right: 0;
+
+        }
+
+        .search button:hover {
+
+            background-color: #c7585c;  
+
+        }
+
+ 
+
+       
+
+        .search button:before {
+
+            content: "血字一下"; 
+
+            font-size: 16px; 
+
+            color: #F9F0DA;  
+
+        }
+
+    </style>
+
+<body>
+
+    <div class="search">
+
+        <form action="" method="post">
+
+	    <input class="search-txt" type='text' id='inp' placeholder="血字一下，查看疫情">
+
+            <button class="search-btn" type="submit"  id='btn'></button>
+
+        </form>
+
+    </div>
+
+ 
+
+</body>
+
+
+
+	<script>
+
+	    var oInp = document.getElementById('inp');
+
+	    var oBtn = document.getElementById('btn');
+
+	
+
+	    oBtn.onclick = function () {
+
+	        Search();
+
+	    }
+
+	
+
+	    document.onkeydown = function () {
+
+	        if (event.keyCode == 13) {
+
+	            Search();
+
+	        }
+
+	    }
+
+	
+
+	    function Search() {
+
+	        var url = 'https://api.vvhan.com/api/covid?city=' + oInp.value;
+
+	        window.open(url);
+
+	    }
+
+	</script>
+</html>
